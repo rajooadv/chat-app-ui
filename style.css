@@ -1,0 +1,265 @@
+:root {
+    --bg: linear-gradient(#953bff, #cc41ff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    height: 141vh;
+    min-width: 315px;
+}
+
+.container {
+
+    width: min(100%, 900px);
+    display: flex;
+    gap: 5em;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* position: absolute;
+    top: 10em;
+    left: 10em; */
+    z-index: 1;
+}
+
+.nav {
+    position: relative;
+    width: 100%;
+    border-radius: 2em 2em 5px 5px;
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.avatar img {
+    width: 3em;
+    border-radius: 50%;
+}
+
+.user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background: white;
+    width: 50%;
+    height: 23px;
+    border-radius: 0 0 1em 1em;
+}
+
+.msg-incomming {
+    width: 17em;
+    padding: 6px;
+    margin: 1em 0em;
+    border-radius: 1em;
+    background: silver;
+}
+
+.msg-sended {
+    border: 1px solid magenta;
+    width: 17em;
+    padding: 6px;
+    margin: 1em 0em;
+    background: white;
+    border-radius: 1em;
+}
+
+.msg2 {
+    width: 9em;
+    padding: 11px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.msg-incomming-radio {
+    margin: 1em 0em;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    width: 17em;
+    background: linear-gradient(to left, #400683, #b405f3);
+    border-radius: 1em;
+}
+
+
+.msg-incomming-radio p,
+.description {
+    color: white;
+}
+
+
+.price,
+.name {
+    font-weight: bold;
+    color: white;
+}
+
+.sended-images {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+img {
+    width: 3em;
+    border-radius: 6px;
+}
+
+
+.msg-incomming p,
+.msg-sended p {
+    color: #cc41ff;
+}
+
+.chat-bottom {
+    padding: 7px;
+}
+
+input.in {
+    width: 80%;
+    height: 80%;
+    border: none;
+}
+
+input.in:focus {
+    outline: none;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit.inline {
+    background: black;
+    width: 1.4em;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    height: 1.5em;
+    align-items: center;
+}
+
+/* 
+body::before {
+    content: '';
+    width: 27%;
+    height: 70%;
+    border-radius: 0em 0em 17em 17em;
+    height: 42em;
+    background: linear-gradient(to top, #ae3dff, #c340fe);
+    position: relative;
+   
+    display: flex;
+} */
+
+body::before {
+    content: "";
+    top: 0;
+    left: 0%;
+    height: 70%;
+    width: 27% !important;
+    background: linear-gradient(to top, #913bfe, #e93dcc);
+    border-end-end-radius: 350px;
+    border-bottom-left-radius: 300px;
+    position: absolute;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    right: 0;
+    bottom: 0;
+    width: 27% !important;
+    background: linear-gradient(#f5f3f3, #dfcece);
+    border-start-start-radius: 350px;
+    border-top-right-radius: 300px;
+}
+
+
+.chat-ui {
+    background-color: white;
+    border-radius: 2em;
+    width: 123%;
+    border: 7px solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media(max-width:609px) {
+    .chat-ui {
+        width: 362px;
+        position: absolute;
+        top: 60px;
+        right: 11px;
+    }
+
+    body {
+        height: 200vh;
+    }
+
+    body::before {
+        content: "";
+        top: 0;
+        left: 0%;
+        height: 70%;
+        background: linear-gradient(to top, #913bfe, #e93dcc);
+        border-end-end-radius: 350px;
+        border-bottom-left-radius: 300px;
+        position: absolute;
+        min-width: 24em;
+    }
+
+    body::after {
+        display: none;
+    }
+
+
+    .right-side {
+        position: absolute;
+        padding: 10em 2em;
+    }
+}
+
+@media(max-width:330px){
+    .chat-ui{
+        width: 279px;
+    }
+}
